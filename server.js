@@ -14,5 +14,5 @@ app.get('/byId/:id',(req,res)=>{
     res.status(200).send(user)
 })
 
-app.listen(3000,()=>console.log('server run'))
+app.listen(3000,()=>console.log('server is run'))
 module.exports = app
