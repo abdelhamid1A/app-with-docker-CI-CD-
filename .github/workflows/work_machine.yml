@@ -33,10 +33,10 @@ jobs:
         heroku_app_name: "work-in-machine" 
         heroku_email: "hamoda.compte@gmail.com"
         usedocker: false
-        -run: 
+        -run: git push heroku HEAD:refs/heads/main --force
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
-      with: git push heroku HEAD:refs/heads/main --force
+      with: 
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
