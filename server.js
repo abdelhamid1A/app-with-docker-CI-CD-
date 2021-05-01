@@ -13,6 +13,6 @@ app.get('/byId/:id',(req,res)=>{
     const user = data.find(item =>item.id === id)
     res.status(200).send(user)
 })
-
-app.listen(3000,()=>console.log('server is running'))
+const port = process.env.PORT || 4000
+app.listen(port,()=>console.log('server is running'))
 module.exports = app

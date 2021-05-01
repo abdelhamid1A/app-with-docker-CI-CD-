@@ -19,7 +19,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
     - name: push to docker
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
@@ -27,7 +26,6 @@ jobs:
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASS }}
-    - uses: actions/checkout@v2
     - uses: akhileshns/heroku-deploy@v3.12.12 
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
