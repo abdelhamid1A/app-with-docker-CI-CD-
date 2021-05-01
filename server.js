@@ -5,7 +5,7 @@ const data = require('./data.json')
 app.use(express.urlencoded({extended : true}))
 app.use(express.json())
 
-app.get('/al',(req,res)=>{
+app.get('/',(req,res)=>{
     res.status(200).json(data)
 })
 app.get('/byId/:id',(req,res)=>{
