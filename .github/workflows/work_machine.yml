@@ -32,7 +32,7 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "work-in-machine" 
         heroku_email: "hamoda.compte@gmail.com"
-        usedocker: true
+        usedocker: false
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
