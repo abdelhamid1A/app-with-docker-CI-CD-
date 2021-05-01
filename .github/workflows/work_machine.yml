@@ -28,11 +28,11 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASS }}
     - name: push to heroku
-      uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      uses: akhileshns/heroku-deploy@v3.12.12 
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "YOUR APP's NAME" #Must be unique in Heroku
-          heroku_email: "YOUR EMAIL"
+          heroku_app_name: "work-in-machine" 
+          heroku_email: "hamoda.compte@gmail.com"
           usedocker: true
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
