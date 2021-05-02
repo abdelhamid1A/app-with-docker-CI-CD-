@@ -4,10 +4,11 @@ const data = require('./data.json')
 
 app.use(express.urlencoded({extended : true}))
 app.use(express.json())
-
+//Get Infos 
 app.get('/',(req,res)=>{
     res.status(200).json(data)
 })
+//Get Specifics Infos
 app.get('/byId/:id',(req,res)=>{
     const id = req.params.id
     const user = data.find(item =>item.id === id)
